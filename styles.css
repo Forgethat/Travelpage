@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Josefin+Sans&family=Lato&family=M+PLUS+1&family=Merriweather&family=Montserrat&family=Mulish:wght@400;600&family=Open+Sans&family=Questrial&family=Roboto&family=Rubik&family=Space+Mono&family=Tinos&family=Work+Sans&display=swap");
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+:root {
+  --lightseagreen: rgb(55, 244, 235);
+}
+body {
+  margin: 0;
+}
+
+nav {
+  font-size: 2rem;
+  font-family: "Mulish";
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5em;
+}
+
+nav ul {
+  display: none;
+}
+nav ul li {
+  cursor: pointer;
+  transition: .6s;
+}
+nav ul li:hover {
+  color: var(--lightseagreen)
+}
+nav .fa-bars {
+  color: #fff;
+  cursor: pointer;
+  transition: .6s;
+}
+nav .fa-bars:hover {
+  color: var(--lightseagreen);
+}
+.main-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.main-bg {
+  background-image: url(images/aerial-view-of-people-swimming-on-sea-4327786.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.hero {
+  font-family: "Merriweather", serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-top: 0;
+  color: white;
+}
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5em;
+  width: 100%;
+  gap: 0.5px;
+  position: relative;
+}
+.input-wrapper .fa-location-dot {
+  background: #e7e4e5;
+  position: absolute;
+  color: #979797;
+  top: 25px;
+  left: 8px;
+  z-index: 1;
+}
+
+.input-wrapper .fa-calendar {
+  position: absolute;
+  color: #979797;
+  top: 80px;
+  left: 8px;
+}
+
+.input-wrapper input {
+  padding: 1.5em;
+  border: none;
+  border-radius: 0.3em 0.3em 0em 0em;
+  position: relative;
+  background: #f6f7f8;
+}
+.input-wrapper input:focus {
+  outline: none;
+}
+.input-wrapper input::placeholder {
+  position: absolute;
+  left: 30px;
+}
+.input-wrapper input + input {
+  border-radius: 0em 0em 0.1em 0;
+}
+
+.input-wrapper button {
+  background: #f89259;
+  outline: none;
+  border: none;
+  color: white;
+  padding: 0.8em 0em;
+  border-radius: 0 0 0.3em 0.3em;
+  cursor: pointer;
+  tran.fa-calendarsition: 0.3s;
+}
+
+.input-wrapper button:hover {
+  background: #fa792d;
+}
+/* Input while focusing */
+.input-wrapper input:first-child:focus ~ .fa-location-dot {
+  display: none;
+}
+.input-wrapper input:nth-child(3):focus ~ .fa-calendar {
+  display: none;
+}
+
+.input-wrapper input:focus::placeholder {
+  color: transparent;
+}
+/* card-area */
+.card-wrapper {
+  margin-top: 2em;
+}
+
+.card-sec {
+  font-family: "Merriweather";
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin-top: 2em;
+  min-height: 10em;
+  border-radius: 0.2em;
+  background-color: white;
+  margin: 0.7em 0;
+}
+
+.card-sec h3 {
+  margin: 0;
+}
+
+.card-price {
+  font-family: "Mulish";
+  font-weight: 600;
+  color: #5f5d74;
+}
+
+.tag {
+  position: relative;
+}
+
+.cancel-tag {
+  font-family: "Mulish";
+  background-color: #c2c2c6;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  max-width: 10em;
+  text-align: end;
+}
+
+.hour-tag {
+  font-family: "Mulish";
+  background-color: #c2c2c6;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  max-width: 6em;
+  text-align: end;
+  position: relative;
+}
+
+.fa-clock {
+  position: absolute;
+  color: #535353;
+  top: 10px;
+  left: 5px;
+}
+
+.fa-check {
+  position: absolute;
+  color: #535353;
+  top: 10px;
+  left: 5px;
+}
+footer h1 {
+    font-size: 4rem;
+    font-family: 'mulish';
+    text-align: center;
+    margin: 0;
+}
+.container {
+  width: 90%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+footer {
+    width: 100vw;
+    font-family: 'Merriweather';
+    background: wheat;
+    text-align: center;
+    margin: 0;
+}
+footer h2 {
+    margin: 0;
+}
+/* media queries */
+@media screen and (min-width: 768px) {
+  header {
+    position: relative;
+    background: inherit;
+    color: white;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  header::before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
+    filter: blur(2px);
+    z-index: -1;
+  }
+  .input-wrapper {
+    width: 100%;
+    margin: 0 auto;
+  }
+  /* No nav-bars on tablet/Desktop */
+  nav .fa-bars {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0.5em;
+    list-style: none;
+  }
+
+  nav ul li {
+    font-size: 1.5rem;
+    margin-right: 0.5em;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav ul li a {
+    color: white;
+    background: #1abbca;
+    padding: 0.7em 1.2em;
+    border-radius: 0.2em;
+    text-decoration: none;
+  }
+
+  .hero h1 {
+    margin-top: 1em;
+  }
+}
+@media screen and (min-width: 1024px) {
+    .card-wrapper {
+        display: flex;
+        gap: 10px;
+    }
+    .card-sec {
+        
+    }
+}
